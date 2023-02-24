@@ -35,10 +35,17 @@
     padding: 10px;
     background-color: #ffffff;
   }
-  /* .carousel{
-    height: 10vh; 
-    /* width: 150vw; */
-  /* } */
   .seeAll a:hover{
     text-decoration: underline !important;
+    color: #f68b1e !important;
+  }
+  .todayDeals .col-2{
+    border-radius: 10px;
+      
+    box-shadow: 0px  2px 2px #d3d3d3;
+  }
+  .todayDeals img{
+     min-height: 10vh;
+     width: 100%;
+     padding: 10px;
   }
