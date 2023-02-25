@@ -1,52 +1,76 @@
-.sticky-top{
-    top: -1px;
-}
-.searcher {
-  display: flex;
-}
-
 .searchTerm {
-  border: 1px solid #686868;
-  border-radius: 5px 0 0 5px;
-  outline: none;
+  border: none;
+  border-radius: 3px;
+  outline: 1px solid grey;
   font-size: 16px;
-  padding-left: 5px;
-  width: 100%;
+  padding: 10px;
+  height: 50px;
 }
 
-    
 .searchButton {
-  width: 40px;
+  width: 50px;
+  height: 50px;
   background: #f68b1e;
   color: #fff;
+  border-radius: 0 5px 5px 0;
   border: 1px solid #5c5f5f;
   text-align: center;
-  border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
-.navbar a{
-    color: #000;
+
+.navbar a {
+  color: #000;
 }
-.navbar a:hover{
-    color: #f68b1e;
+
+.navbar a:hover,
+.offcanvas a:hover {
+  color: #f68b1e;
 }
+
 .dropdown-menu {
-    border: none;
-    box-shadow: 0 2px 2px 2px grey;
-    padding: 10px;
-    background-color: #ffffff;
-  }
-  .seeAll a:hover{
-    text-decoration: underline !important;
-    color: #f68b1e !important;
-  }
-  .todayDeals .col-2{
-    border-radius: 10px;
-      
-    box-shadow: 0px  2px 2px #d3d3d3;
-  }
-  .todayDeals img{
-     min-height: 10vh;
-     width: 100%;
-     padding: 10px;
-  }
+  border: none;
+  box-shadow: 0px 0px 20px 0px #949191;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+.seeAll a:hover {
+  text-decoration: underline !important;
+  color: #f68b1e !important;
+}
+
+.todayDeals .col-2 {
+  border-radius: 10px;
+
+  box-shadow: 0px 2px 2px #d3d3d3;
+}
+
+.todayDeals img {
+  min-height: 10vh;
+  width: 100%;
+  padding: 10px;
+}
+
+.todayDeals .deals:hover {
+  box-shadow: 0px 0px 20px 0px #cfcece;
+}
+
+.appliance img {
+  min-height: 10vh;
+  width: 100%;
+  padding: 10px;
+}
+
+.appliance .deals:hover {
+  box-shadow: 0px 0px 20px 0px #cfcece;
+}
+
+input.nosubmit {
+  min-width: 100%;
+  border: none;
+  border-radius: 3px;
+  outline: 1px solid #f68b1e;
+  font-size: 16px;
+  padding: 9px 4px 9px 40px;
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+}

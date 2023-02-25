@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
@@ -15,23 +15,21 @@
    <header>
     <img src="https://ng.jumia.is/cms/0-1-cpr/2022/june-14/free-delivery-banner.gif" alt="" class="d-md-block d-none" style="width: 100%;">
     <img src="https://ng.jumia.is/cms/0-1-cpr/2022/june-14/free-delivery-Mobile-strip.gif" class="d-md-none" alt="" style="width: 100%;">
-
-    <nav class="navbar navbar-expand-lg bg-white shadow">
-        <div>
-         <div class="d-flex">
-          <a class="navbar-brand fw-bold" href="#">Olami<i class="bi bi-star text-warning"></i></a>
-          <div class="d-flex d-md-none" >
-            <input type="text" class="searchTerm" placeholder="Search for categories..." >
-            <button type="submit" class="searchButton">
-             <i class="bi bi-search"></i>
-           </button>
+    <!-- Small Devices Navbar-->
+    <div class="container-fluid  d-md-none d-flex align-items-center justify-content-between shadow mb-1 p-2" >
+      <a class="navbar-brand fw-bold" href="#" id="olaBrand">Olami<i class="bi bi-star text-warning"></i></a>
+        <input class="nosubmit" type="search" placeholder="Search..." id="searchBar" style="display: none;" onkeydown="searchBarr(event)">
+            <i class="bi bi-search fs-5" id="searchIcon"></i>
          </div>
-         </div>
+         <!-- Large Device Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white container d-none d-md-block">
+        <div class="d-flex">
+          <em class="navbar-brand fw-bold" href="#">Olami<i class="bi bi-star text-warning"></i></em>
           <button class="navbar-toggler d-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav gap-md-4 gap-2">
+            <ul class="navbar-nav gap-md-4">
               <li class="nav-item">
                 <a class="nav-link active fw-semibold" aria-current="page" href="#" style="color: #f68b1e;">Home</a>
               </li>
@@ -49,13 +47,13 @@
               </li>
               <div class="d-none d-md-flex">
                 <input type="text" class="searchTerm" placeholder="Search for categories...">
-                <button type="submit" class="searchButton ">
+                <button class="searchButton" onclick="searchBarrr()">
                  <i class="bi bi-search"></i>
                </button>
              </div>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="bi bi-person" style="font-size: medium;"></i> ACCOUNT
+                  <i class="bi bi-person" style="font-size: larger;"></i> ACCOUNT
                 </a>
                 <ul class="dropdown-menu">
                   <li class="text-center"><a class="dropdown-item" href="#"><button class="btn" style="background-color: #f68b1e;color: #fff;">SIGN IN</button></a></li>
@@ -66,10 +64,10 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="#"><i class="bi bi-question-lg" style="font-size: medium;"></i>Help</a>
+                <a class="nav-link " aria-current="page" href="#"><i class="bi bi-question-lg" style="font-size: larger;"></i>Help</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="#"><i class="bi bi-cart3 " style="font-size: medium;"></i> Cart</a>
+                <a class="nav-link " aria-current="page" href="#"><i class="bi bi-cart3 " style="font-size: larger;"></i> Cart</a>
               </li>
             </ul> 
           </div>
@@ -103,11 +101,11 @@
       <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
-    <div class="offcanvas-body">
+    <div class="offcanvas-body" style="font-size: larger;">
        <ul class="navbar-nav">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-justify" style="font-size: medium;"></i> Categories
+            <i class="bi bi-justify" style="font-size: larger;"></i> Categories
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Computers and Accessories</a></li>
@@ -119,7 +117,7 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-person" style="font-size: medium;"></i> ACCOUNT
+            <i class="bi bi-person" style="font-size: larger;"></i> ACCOUNT
           </a>
           <ul class="dropdown-menu">
             <li class="text-center"><a class="dropdown-item" href="#"><button class="btn" style="background-color: #f68b1e;color: #fff;">SIGN IN</button></a></li>
@@ -130,17 +128,17 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link " aria-current="page" href="#"><i class="bi bi-question-lg" style="font-size: medium;"></i>Help</a>
+          <a class="nav-link " aria-current="page" href="#"><i class="bi bi-question-lg" style="font-size: larger;"></i>Help</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " aria-current="page" href="#"><i class="bi bi-cart3 " style="font-size: medium;"></i> Cart</a>
+          <a class="nav-link " aria-current="page" href="#"><i class="bi bi-cart3 " style="font-size: larger;"></i> Cart</a>
         </li>
        </ul>
     </div>
   </div>
 
   <!-- carousel -->
-   <section class="container-fluid mt-1">
+   <section class="container-fluid">
       <div class="row">
       <div class="col-6">
         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
@@ -180,46 +178,98 @@
    </section>
  
     <!-- Today's Deals -->
-     <section class="todayDeals m-2">
-         <nav class="p-2" style="background-color: #f5d6be;">
-          <ul class="nav justify-content-between" >
-            <li class="nav-item">
-              <h4 class="text-white">Today's Deals</h4>
-            </li>
-            <li class="nav-item seeAll">
-             <a href="" class="text-dark"  style="text-decoration: none;">See All Items</a>
-            </li>
-         </nav>
-         <div class="ms-md-4">
-         <div class="row mt-2 gap-3 ms-3">
-            <div class="col-5 col-md-2 shadow">
-              <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/74/523389/1.jpg?7424" alt="">
-              <span>itel 20000mAh Du...</span><br><span style="font-size: large;">₦ 8,740</span>
-              <h6 style="text-decoration: line-through;font-size: small;color: #424242;">₦ 14,000</h6>
-            </div>
-            <div class="col-5 col-md-2 shadow">
-              <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/38/0001561/1.jpg?8896" alt="">
-              <span>itel 10000mAh Star...</span><br><span style="font-size: large;">₦ 5,500</span>
-              <h6 style="text-decoration: line-through;font-size: small;color: #424242;">₦ 7,500</h6>
-            </div>
-            <div class="col-5 col-md-2 shadow">
-              <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/59/114556/1.jpg?8547" alt="">
-              <span>Duravolt Recharge....</span><br><span style="font-size: large;">₦ 25,250</span>
-              <h6 style="text-decoration: line-through;font-size: small;color: #424242;">₦ 95,000</h6>
-            </div>
-            <div class="col-5 col-md-2 shadow">
-              <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/91/3748901/1.jpg?1058" alt="">
-              <span>Oraimo 27000mAh...</span><br><span style="font-size: large;">₦ 6,700</span>
-              <h6 style="text-decoration: line-through;font-size: small;color: #424242;">₦ 9,909</h6>
-            </div>
-            <div class="col-5 col-md-2 shadow">
-              <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/50/397518/1.jpg?9926" alt="">
-              <span>Oraimo 27000mAh...</span><br><span style="font-size: large;">₦ 19,000</span>
-              <h6 style="text-decoration: line-through;font-size: small;color: #424242;">₦ 39,572</h6>
-            </div>
-           </div>
+    <section class="todayDeals container-fluid mt-3">
+      <nav class="p-2" style="background-color: #f5d6be;">
+       <ul class="nav justify-content-between" >
+         <li class="nav-item">
+           <h4 class="text-white">Today's Deals</h4>
+         </li>
+         <li class="nav-item seeAll">
+          <a href="" class="text-dark"  style="text-decoration: none;">See All Items</a>
+         </li>
+      </nav>
+      <div>
+      <div class="row mt-2">
+         <div class="col-6 col-md-2 rounded deals">
+           <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/74/523389/1.jpg?7424" alt="">
+           <span style="font-size: 17px;">itel 20000mAh Du...</span><br><span style="font-size: large;">₦ 8,740</span>
+           <h6 style="text-decoration: line-through;font-size: small;color: #424242;">₦ 14,000</h6>
          </div>
-     </section>
+         <div class="col-6 col-md-2 rounded deals">
+           <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/38/0001561/1.jpg?8896" alt="">
+           <span style="font-size: 17px;">itel 10000mAh Star...</span><br><span style="font-size: large;">₦ 5,500</span>
+           <h6 style="text-decoration: line-through;font-size: small;color: #424242;">₦ 7,500</h6>
+         </div>
+         <div class="col-6 col-md-2 rounded deals">
+           <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/59/114556/1.jpg?8547" alt="">
+           <span style="font-size: 17px;">Duravolt Recharge....</span><br><span style="font-size: large;">₦ 25,250</span>
+           <h6 style="text-decoration: line-through;font-size: small;color: #424242;">₦ 95,000</h6>
+         </div>
+         <div class="col-6 col-md-2 rounded deals">
+           <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/91/3748901/1.jpg?1058" alt="">
+           <span style="font-size: 17px;">Oraimo 27000mAh...</span><br><span style="font-size: large;">₦ 6,700</span>
+           <h6 style="text-decoration: line-through;font-size: small;color: #424242;">₦ 9,909</h6>
+         </div>
+         <div class="col-6 col-md-2 rounded deals">
+           <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/50/397518/1.jpg?9926" alt="">
+           <span style="font-size: 17px;">Oraimo 27000mAh...</span><br><span style="font-size: large;">₦ 19,000</span>
+           <h6 style="text-decoration: line-through;font-size: small;color: #424242;">₦ 39,572</h6>
+         </div>
+         <div class="col-6 col-md-2 rounded deals">
+           <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/71/373998/1.jpg?0975" alt="">
+           <span style="font-size: 17px;">Oraimo Riff Smaller...</span><br><span style="font-size: large;">₦ 13,500</span>
+           <h6 style="text-decoration: line-through;font-size: small;color: #424242;">₦ 17,727</h6>
+         </div>
+        </div>
+      </div>
+  </section>
 
+  <!-- Large Appliance -->
+    <section class="appliance container-fluid mt-3">
+      <nav class="p-2" style="background-color: #f5d6be;">
+       <ul class="nav justify-content-between" >
+         <li class="nav-item">
+           <h4 class="text-dark">Large Appliances (Pay on Delivery)</h4>
+         </li>
+         <li class="nav-item seeAll">
+          <a href="" class="text-dark"  style="text-decoration: none;">See All Items ></a>
+         </li>
+      </nav>
+      <div>
+      <div class="row mt-2">
+         <div class="col-6 col-md-2 rounded deals">
+           <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/87/1332231/1.jpg?4843" alt="">
+           <span style="font-size: 17px;">Haier Freezer...</span><br><span style="font-size: large;">₦ 163,512</span>
+           <h6 style="text-decoration: line-through;font-size: small;color: #424242;">₦ 188,039</h6>
+         </div>
+         <div class="col-6 col-md-2 rounded deals">
+           <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/87/152789/1.jpg?6403" alt="">
+           <span style="font-size: 17px;">Duravolt 2000VA Stabilizer</span><br><span style="font-size: large;">₦ 5,500</span>
+           <h6 style="text-decoration: line-through;font-size: small;color: #424242;">₦ 7,500</h6>
+         </div>
+         <div class="col-6 col-md-2 rounded deals">
+          <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/59/114556/1.jpg?8547" alt="">
+          <span style="font-size: 17px;">Duravolt Recharge....</span><br><span style="font-size: large;">₦ 25,250</span>
+          <h6 style="text-decoration: line-through;font-size: small;color: #424242;">₦ 95,000</h6>
+        </div>
+        <div class="col-6 col-md-2 rounded deals">
+          <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/91/3748901/1.jpg?1058" alt="">
+          <span style="font-size: 17px;">Oraimo 27000mAh...</span><br><span style="font-size: large;">₦ 6,700</span>
+          <h6 style="text-decoration: line-through;font-size: small;color: #424242;">₦ 9,909</h6>
+        </div>
+        <div class="col-6 col-md-2 rounded deals">
+          <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/50/397518/1.jpg?9926" alt="">
+          <span style="font-size: 17px;">Oraimo 27000mAh...</span><br><span style="font-size: large;">₦ 19,000</span>
+          <h6 style="text-decoration: line-through;font-size: small;color: #424242;">₦ 39,572</h6>
+        </div>
+        <div class="col-6 col-md-2 rounded deals">
+          <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/71/373998/1.jpg?0975" alt="">
+          <span style="font-size: 17px;">Oraimo Riff Smaller...</span><br><span style="font-size: large;">₦ 13,500</span>
+          <h6 style="text-decoration: line-through;font-size: small;color: #424242;">₦ 17,727</h6>
+        </div>
+        </div>
+      </div>
+  </section>
+  <script src="olami.js"></script>
 </body>
 </html>
