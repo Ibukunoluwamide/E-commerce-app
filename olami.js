@@ -1,36 +1,39 @@
-searchIcon.addEventListener("click",()=>{
+console.log(lgNavbar.innerHTML);
+searchIcon.addEventListener("click", () => {
     searchIcon.style.display = "none"
     olaBrand.style.display = "none"
     searchBar.style.display = "block"
 })
-const searchBarr = (event)=>{
+const searchBarr = (event) => {
     console.log(event.keyCode);
-    if (event.keyCode==13) {
+    if (event.keyCode == 13) {
         alert("Searching...")
         searchIcon.style.display = "flex"
         olaBrand.style.display = "flex"
         searchBar.style.display = "none"
     }
 }
-const searchBarrr = ()=>{
-        alert("Searching...")
-    
+const searchBarrr = () => {
+    alert("Searching...")
+
 }
 let itemArray = []
 let addToCart = document.querySelectorAll(".item")
 // console.log(addToCart)
-addToCart.forEach((eachItem)=>{
-    eachItem.addEventListener("click",()=>{
+addToCart.forEach((eachItem) => {
+    eachItem.addEventListener("click", () => {
         // console.log(eachItem.firstElementChild.src);
-         let itemDetails = {
-            itemImage: eachItem.firstElementChild.src,
-            itemText: eachItem.innerHTML
-         }
+        let itemDetails = {
+            itemText: eachItem.innerHTML,
+           largeDeviceNav: lgNavbar.innerHTML,
+           smallDeviceFooter: smDeviceFooter.innerHTML,
+           offCanvasMenu:offcanvasExample.innerHTML
+        }
         itemArray.push(itemDetails)
-        console.log(itemArray);
-        localStorage.setItem("itemm",JSON.stringify(itemArray))
+        // console.log(itemArray);
+        localStorage.setItem("itemm", JSON.stringify(itemArray))
         window.location.href = "itemInfo.html"
         // alert("carrt")
 
-})
+    })
 })

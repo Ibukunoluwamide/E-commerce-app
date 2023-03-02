@@ -1,6 +1,7 @@
-.sticky-top { 
-  bottom: .2em; 
-  }
+.sticky-top {
+  bottom: .2em;
+}
+
 .searchTerm {
   border: none;
   border-radius: 3px;
@@ -8,7 +9,7 @@
   font-size: 16px;
   padding: 10px;
   background-color: white;
-  
+
 }
 
 .searchButton {
@@ -22,6 +23,7 @@
   box-shadow: 0px 0px 6px #d1cece;
 
 }
+
 .subTerm {
   border: none;
   border-radius: 3px;
@@ -29,7 +31,7 @@
   font-size: 16px;
   padding: 5px;
   background-color: white;
-  
+
 }
 
 .subButton {
@@ -42,6 +44,7 @@
   cursor: pointer;
 
 }
+
 input.nosubmit {
   min-width: 100%;
   border: none;
@@ -109,6 +112,7 @@ input.nosubmit {
 .executive .item:hover {
   box-shadow: 0px 0px 20px 0px #cfcece;
 }
+
 .phones img {
   min-height: 10vh;
   width: 100%;
@@ -119,10 +123,11 @@ input.nosubmit {
   box-shadow: 0px 0px 20px 0px #cfcece;
 }
 
-.lgFooter li{
-   list-style: none;
+.lgFooter li {
+  list-style: none;
 }
-.lgFooter li:hover{
-   color: #fff;
-   cursor: pointer;
+
+.lgFooter li:hover {
+  color: #fff;
+  cursor: pointer;
 }
