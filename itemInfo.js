@@ -1,11 +1,19 @@
 
 let totalQuantity = 1
 quantity.innerHTML = 1
-let itemDetails = JSON.parse(localStorage.getItem("itemm"))
-console.log(itemDetails);
+let navbars = JSON.parse(localStorage.getItem("Navbars"))
+let itemDetails = JSON.parse(localStorage.getItem("iteminfo"))
+// console.log(itemDetails);
 itemDetails.map((eachItem) => {
-    // console.log(eachItem.itemText);
+    console.log(eachItem.itemText);
     displayInfo.innerHTML = `${eachItem.itemText}`
+    displayLargeNavbar.innerHTML = `${eachItem.largeDeviceNav}`
+    displaySmfooter.innerHTML = `${eachItem.smallDeviceFooter}`
+    offcanvasExample.innerHTML = `${eachItem.offCanvasMenu}`
+    
+})
+image.style.marginLeft = "15%"
+navbars.map((eachItem) => {
     displayLargeNavbar.innerHTML = `${eachItem.largeDeviceNav}`
     displaySmfooter.innerHTML = `${eachItem.smallDeviceFooter}`
     offcanvasExample.innerHTML = `${eachItem.offCanvasMenu}`
@@ -47,6 +55,17 @@ const searchBarrr = () => {
 
 }
 const addToCart = () => {
+ let array = []   
+ let cartItem = {
+       itemImage : image.src,
+       itemName: itemTitle.innerText,
+       itemPrice :itemPrice.innerText,
+       itemOldPrice :itemOldPrice.innerText,
+       itemPercentage : itemPercent.innerText
+ }
+ array.push(cartItem)
+ console.log(array);
+ localStorage.setItem("cartItem",JSON.stringify(array))
     Swal.fire({
         icon: 'success',
         text: `${quantity.innerHTML} item(s) has been added`,

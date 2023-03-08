@@ -1,4 +1,15 @@
-console.log(lgNavbar.innerHTML);
+let navbarArray = []
+const homeLoad = ()=>{
+    let itemDetails = {
+       largeDeviceNav: lgNavbar.innerHTML,
+       smallDeviceFooter: smDeviceFooter.innerHTML,
+       offCanvasMenu:offcanvasExample.innerHTML
+    }
+    navbarArray.push(itemDetails)
+    localStorage.setItem("Navbars", JSON.stringify(navbarArray))
+
+}
+
 searchIcon.addEventListener("click", () => {
     searchIcon.style.display = "none"
     olaBrand.style.display = "none"
@@ -25,15 +36,10 @@ addToCart.forEach((eachItem) => {
         // console.log(eachItem.firstElementChild.src);
         let itemDetails = {
             itemText: eachItem.innerHTML,
-           largeDeviceNav: lgNavbar.innerHTML,
-           smallDeviceFooter: smDeviceFooter.innerHTML,
-           offCanvasMenu:offcanvasExample.innerHTML
         }
         itemArray.push(itemDetails)
-        // console.log(itemArray);
-        localStorage.setItem("itemm", JSON.stringify(itemArray))
+        localStorage.setItem("iteminfo", JSON.stringify(itemArray))
         window.location.href = "itemInfo.html"
-        // alert("carrt")
 
     })
 })

@@ -15,7 +15,7 @@
   <title>OlaDev</title>
 </head>
 
-<body>
+<body onload="homeLoad()">
   <!-- Navbar -->
   <img src="https://ng.jumia.is/cms/0-1-cpr/2022/june-14/free-delivery-banner.gif" alt="" class="d-md-block d-none"
     style="width: 100%;">
@@ -24,7 +24,7 @@
   <!-- Small Devices Navbar-->
   <div
     class="container-fluid bg-white d-md-none d-flex align-items-center justify-content-between shadow p-2 sticky-top">
-    <em> <a class="navbar-brand fw-bold fs-5" href="#" id="olaBrand">OlaDev <i
+    <em> <a class="navbar-brand fw-bold fs-5" href="index.html" id="olaBrand">OlaDev <i
           class="bi bi-stars text-warning"></i></a></em>
     <input class="nosubmit" type="search" placeholder="Search..." id="searchBar" style="display: none;"
       onkeydown="searchBarr(event)">
@@ -34,7 +34,7 @@
   <!-- Large Device Navbar -->
   <nav class="navbar sticky-top navbar-expand bg-white container-fluid d-none d-md-block shadow ps-5 mb-1" id="lgNavbar">
     <div class="d-flex">
-      <em class="navbar-brand fw-bold ps-5" href="#">OlaDev <i class="bi bi-stars text-warning"></i></em>
+      <em class="navbar-brand fw-bold ps-5" href="index.html">OlaDev <i class="bi bi-stars text-warning"></i></em>
       <button class="navbar-toggler d-none" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -50,10 +50,10 @@
               Categories
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Computers and Accessories</a></li>
-              <li><a class="dropdown-item" href="#">Phones and Tablets</a></li>
-              <li><a class="dropdown-item" href="#">Electronics</a></li>
-              <li><a class="dropdown-item" href="#">Home and Kitchen</a></li>
+              <li><a class="dropdown-item" href="home-kitchen.html">Home and Kitchen</a></li>
+              <li><a class="dropdown-item" href="phonesTablet.html">Phones and Tablets</a></li>
+              <li><a class="dropdown-item" href="electronics.html">Electronics</a></li>
+              <li><a class="dropdown-item" href="fashion.html">Fashion</a></li>
               <li><a class="dropdown-item" href="#">Other Categories</a></li>
             </ul>
           </li>
@@ -65,7 +65,7 @@
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="bi bi-person" style="font-size: large;" class="itemPrice"> ACCOUNT</i>
+              <i class="bi bi-person" style="font-size: large;"> ACCOUNT</i>
             </a>
             <ul class="dropdown-menu">
               <li class="text-center"><a class="dropdown-item" href="#"><button class="btn"
@@ -79,11 +79,11 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="#"><i class="bi bi-question-lg" style="font-size: large;" class="itemPrice">
+            <a class="nav-link " aria-current="page" href="#"><i class="bi bi-question-lg" style="font-size: large;">
                 Help</i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="cart.html"><i class="bi bi-cart3 " style="font-size: large;" class="itemPrice">
+            <a class="nav-link " aria-current="page" href="cart.html"><i class="bi bi-cart3 " style="font-size: large;">
                 Cart</i> </a>
           </li>
         </ul>
@@ -142,58 +142,69 @@
           <h5>Official Store item</h5>
         </li>
         <li class="nav-item seeAll">
-          <a href="" class="text-dark" style="text-decoration: none;">See All Items ></a>
+          <a href="phonesTablet.html" class="text-dark" style="text-decoration: none;">See All Items > </a>
         </li>
     </nav>
     <div>
       <div class="row mt-2">
         <div class="col-6 col-md-2 rounded item">
-          <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/74/523389/1.jpg?7424" alt="">
-          <br><span style="font-size: 17px;" class="itemTitle">itel 20000mAh Dual Output & Dual Output Fast Charging Power
-            Bank</span><br><span style="font-size: large;" class="itemPrice">₦ 8,740</span>
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/71/1653591/1.jpg?9710" alt="" id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">itel S18 6.6", 64GB ROM + 2GB RAM (UpTo 4GB), 5000mAh, 4G - Black</span><br>
+            <span style="font-size: large;" id="itemPrice">₦ 56,990</span>
           <p class="d-flex justify-content-between"><em
-              style="text-decoration: line-through;font-size: small;color: #424242;">₦ 14,000
-            </em><span class="text-warning">-38%</span></p>
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">₦ 80,000
+            </em><span class="text-warning" id="itemPercent">-29%</span></p>
         </div>
         <div class="col-6 col-md-2 rounded item">
-          <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/38/0001561/1.jpg?8896" alt="">
-          <br><span style="font-size: 17px;" class="itemTitle">itel Super Slim 10000mAh 2.1A Fast Charging Power Bank</span><br><span
-            style="font-size: large;" class="itemPrice" class="itemPrice">₦ 5,500</span>
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/69/0227302/1.jpg?4025" alt="" id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Samsung Galaxy A04 - 6.5" - Dual SIM - 4G LTE - 50MP - 5000mAh - Facial Recognition 4GB/64GB Memory - Green</span><br>
+          <span style="font-size: large;" id="itemPrice">₦ 80,500</span>
           <p class="d-flex justify-content-between"><em
-              style="text-decoration: line-through;font-size: small;color: #424242;">₦ 7,500
-            </em><span class="text-warning">-27%</span></p>
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">₦ 105,000
+            </em><span class="text-warning" id="itemPercent">-23%</span></p>
         </div>
         <div class="col-6 col-md-2 rounded item">
-          <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/59/114556/1.jpg?8547" alt="">
-          <br><span style="font-size: 17px;" class="itemTitle">Duravolt Rechargeable Table Fan With Solar Panel</span><br><span
-            style="font-size: large;" class="itemPrice" class="itemPrice">₦ 25,250</span>
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/96/3591321/1.jpg?8402" alt="" id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Infinix Smart 6 4G (X6511B) 6.6" HD+, 2GB RAM + 32GB ROM, 5000mAh, Android 11, 8MP Camera, 4G LTE, Fingerprint + Face ID - Black
+          </span><br>
+          <span
+            style="font-size: large;" id="itemPrice">₦ 66,990</span>
           <p class="d-flex justify-content-between"><em
-              style="text-decoration: line-through;font-size: small;color: #424242;">₦ 95,000
-            </em><span class="text-warning">-73%</span></p>
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">₦ 70,000
+            </em><span class="text-warning" id="itemPercent">-4%</span></p>
         </div>
         <div class="col-6 col-md-2 rounded item">
-          <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/91/3748901/1.jpg?1058" alt="">
-          <br><span style="font-size: 17px;" class="itemTitle">Oraimo SoundGo 4 Ultra-portable Wireless Speaker</span><br><span
-            style="font-size: large;" class="itemPrice" class="itemPrice">₦ 6,700</span>
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/36/062569/1.jpg?1644" alt="" id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Android 8.1 4G+64G Tablet 10.1 Inch Quad Core WIFI Blu Black</span><br>
+          <span
+            style="font-size: large;" id="itemPrice">₦ 85,683</span>
           <p class="d-flex justify-content-between"><em
-              style="text-decoration: line-through;font-size: small;color: #424242;">₦ 9,909
-            </em><span class="text-warning">-32%</span></p>
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">₦ 111,387
+            </em><span class="text-warning" id="itemPercent">-23%</span></p>
         </div>
         <div class="col-6 col-md-2 rounded item">
-          <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/50/397518/1.jpg?9926" alt="">
-          <br><span style="font-size: 17px;" class="itemTitle">Oraimo 27000mAh Massive Power Charing Bank Traveller 3 Byte</span><br><span
-            style="font-size: large;" class="itemPrice" class="itemPrice">₦ 19,000</span>
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/53/1901202/1.jpg?8046" alt="" id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">XIAOMI Poco M5, 6.58" (4GB RAM, 64GB ROM) Android 12 (50/2/2)MP + 5MP Selfie - 4G - Dual Sim -facial Recognition, Fingerprint - 5000mAh- Black</span><br>
+          <span
+            style="font-size: large;" id="itemPrice">₦ 101,000</span>
           <p class="d-flex justify-content-between"><em
-              style="text-decoration: line-through;font-size: small;color: #424242;">₦ 39,572
-            </em><span class="text-warning">-52%</span></p>
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">₦ 180,000
+            </em><span class="text-warning" id="itemPercent">-44%</span></p>
         </div>
         <div class="col-6 col-md-2 rounded item">
-          <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/71/373998/1.jpg?0975" alt="">
-          <br><span style="font-size: 17px;" class="itemTitle">Oraimo Riff Smaller For Comfort True Wireless Earbuds -Black</span><br><span
-            style="font-size: large;" class="itemPrice" class="itemPrice">₦ 13,500</span>
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/47/0016222/1.jpg?4111" alt="" id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Apple IPad 10th Gen 10.9" Wi-Fi 64GB - Blue - 2022 - Model</span><br>
+          <span
+            style="font-size: large;" id="itemPrice">₦ 385,999</span>
           <p class="d-flex justify-content-between"><em
-              style="text-decoration: line-through;font-size: small;color: #424242;">₦ 17,727
-            </em><span class="text-warning">-24%</span></p>
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">₦ 700,999
+            </em><span class="text-warning" id="itemPercent">-45%</span></p>
         </div>
       </div>
     </div>
@@ -213,54 +224,65 @@
     <div>
       <div class="row mt-2">
         <div class="col-6 col-md-2 rounded item">
-          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/87/1332231/1.jpg?4843" alt="">
-          <br><span style="font-size: 17px;" class="itemTitle">Haier Thermocool HTF-150H Chest Freezer (Storage Volume 146L)</span><br><span
-            style="font-size: large;" class="itemPrice" class="itemPrice">₦ 163,512</span>
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/87/1332231/1.jpg?4843" alt="" id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Haier Thermocool HTF-150H Chest Freezer (Storage Volume 146L)</span><br>
+          <span
+            style="font-size: large;" id="itemPrice">₦ 163,512</span>
           <p class="d-flex justify-content-between"><em
-              style="text-decoration: line-through;font-size: small;color: #424242;">₦ 188,039
-            </em><span class="text-warning">-13%</span></p>
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">₦ 188,039
+            </em><span class="text-warning" id="itemPercent">-13%</span></p>
         </div>
         <div class="col-6 col-md-2 rounded item">
-          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/92/1243821/1.jpg?0470" alt="">
-          <br><span style="font-size: 17px;" class="itemTitle">Nexus 1Hp Split Air Conditioner with full installation Kit - R410 GAS
-            NX-MSSH9000SC</span><br><span style="font-size: large;" class="itemPrice">₦ 167,400</span>
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/92/1243821/1.jpg?0470" alt="" id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Nexus 1Hp Split Air Conditioner with full installation Kit - R410 GAS
+            NX-MSSH9000SC</span><br>
+            <span style="font-size: large;" id="itemPrice">₦ 167,400</span>
           <p class="d-flex justify-content-between"><em
-              style="text-decoration: line-through;font-size: small;color: #424242;">₦ 192,510
-            </em><span class="text-warning">-13%</span></p>
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">₦ 192,510
+            </em><span class="text-warning" id="itemPercent">-13%</span></p>
           <h6 style="text-decoration: line-through;font-size: small;color: #424242;"></h6>
         </div>
         <div class="col-6 col-md-2 rounded item">
-          <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/23/4243011/1.jpg?5748" alt="">
-          <br><span style="font-size: 17px;" class="itemTitle">Haier Thermocool 192 Litres 1 Door DCool Refrigerator - HR-195CS R6 SLV -
-            Silver</span><br><span style="font-size: large;" class="itemPrice">₦ 178,718</span>
+          <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/23/4243011/1.jpg?5748" alt="" id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Haier Thermocool 192 Litres 1 Door DCool Refrigerator - HR-195CS R6 SLV -
+            Silver</span><br>
+            <span style="font-size: large;" id="itemPrice">₦ 178,718</span>
           <p class="d-flex justify-content-between"><em
-              style="text-decoration: line-through;font-size: small;color: #424242;">₦ 205,526
-            </em><span class="text-warning">-13%</span></p>
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">₦ 205,526
+            </em><span class="text-warning" id="itemPercent">-13%</span></p>
         </div>
         <div class="col-6 col-md-2 rounded item">
-          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/06/951058/1.jpg?2917" alt="">
-          <br><span style="font-size: 17px;" class="itemTitle">Hisense 65" UHD 4K SMART TV,3 HDMI,2 USB, 1 AV, Free Wall Bracket, WIFI,
-            LAN</span><br><span style="font-size: large;" class="itemPrice">₦ 58,990</span>
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/06/951058/1.jpg?2917" alt="" id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Hisense 65" UHD 4K SMART TV,3 HDMI,2 USB, 1 AV, Free Wall Bracket, WIFI,
+            LAN</span><br>
+            <span style="font-size: large;" id="itemPrice">₦ 58,990</span>
           <p class="d-flex justify-content-between"><em
-              style="text-decoration: line-through;font-size: small;color: #424242;">₦ 72,000
-            </em><span class="text-warning">-18%</span></p>
-          <h6 style="text-decoration: line-through;font-size: small;color: #424242;">
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">₦ 72,000
+            </em><span class="text-warning" id="itemPercent">-18%</span></p>
+          
+        </div>
+        <div class="col-6 col-md-2 rounded item">
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/43/0104011/1.jpg?0857" alt="" id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Haier Thermocool 1.5HP Air Conditioner (HSU-12TESN-02) With 1 Minute Instant
+            Chill. + Free Installation Kits</span><br>
+            <span style="font-size: large;" id="itemPrice">₦ 197,575</span>
+          <p class="d-flex justify-content-between"><em
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">₦ 227,211
+            </em><span class="text-warning" id="itemPercent">-13%</span></p>
           </h6>
         </div>
         <div class="col-6 col-md-2 rounded item">
-          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/43/0104011/1.jpg?0857" alt="">
-          <br><span style="font-size: 17px;" class="itemTitle">Haier Thermocool 1.5HP Air Conditioner (HSU-12TESN-02) With 1 Minute Instant
-            Chill. + Free Installation Kits</span><br><span style="font-size: large;" class="itemPrice">₦ 197,575</span>
-          <p class="d-flex justify-content-between"><em
-              style="text-decoration: line-through;font-size: small;color: #424242;">₦ 227,211
-            </em><span class="text-warning">-13%</span></p>
-          </h6>
-        </div>
-        <div class="col-6 col-md-2 rounded item">
-          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/67/4203591/1.jpg?4994" alt="">
-          <br><span style="font-size: 17px;" class="itemTitle">Nexus UPRIGHT SHOWCASE FRIDGE NX-401</span>
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/67/4203591/1.jpg?4994" alt="" id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Nexus UPRIGHT SHOWCASE FRIDGE NX-401</span>
           </span><br>
-          <span style="font-size: large;" class="itemPrice">₦ 287,496</span>
+
+          <span style="font-size: large;" id="itemPrice">₦ 287,496</span>
           </h6>
         </div>
       </div>
@@ -280,51 +302,61 @@
     <div>
       <div class="row mt-2">
         <div class="col-6 col-md-2 rounded item">
-          <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/43/8507612/1.jpg?9071" alt="">
-          <br><span style="font-size: 17px;" class="itemTitle">Asus Notebook 10th Gen, Intel Core I3 12GB RAM 1TB HDD, 2.1GHz Up To 4.1GHz
-            15.6" Wins 10+ Mouse</span><br><span style="font-size: large;" class="itemPrice">₦ 246,000</span>
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/709/1.jpg?1605" alt="" id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Saisho Electric Hot Plate HP-10</span><br>
+            <span style="font-size: large;" id="itemPrice">₦ 10,557</span>
         </div>
         <div class="col-6 col-md-2 rounded item">
-          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/77/745887/1.jpg?1158" alt="">
-          <br><span style="font-size: 17px;" class="itemTitle">Oraimo Smart Watch 1.69'' IPS Screen IP68 Waterproof</span><br><span
-            style="font-size: large;" class="itemPrice" class="itemPrice">₦ 25,000</span>
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/88/519578/1.jpg?2406" alt="" id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Qasa 7 Inches Rechargeable Table Fan</span><br>
+          <span
+            style="font-size: large;" id="itemPrice">₦ 10,998</span>
           <p class="d-flex justify-content-between"><em
-              style="text-decoration: line-through;font-size: small;color: #424242;">₦ 32,636
-            </em><span class="text-warning">-23%</span></p>
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">₦ 17,040
+            </em><span class="text-warning" id="itemPercent">-35%</span></p>
           </h6>
         </div>
         <div class="col-6 col-md-2 rounded item">
-          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/39/970028/1.jpg?7175" alt="">
-          <br><span style="font-size: 17px;" class="itemTitle">Ox 18-Inch Plus Rechargeable Standing Fan Wit Remote Control.</span><br><span
-            style="font-size: large;" class="itemPrice" class="itemPrice">₦ 41,999</span>
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/39/970028/1.jpg?7175" alt="" id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Ox 18-Inch Plus Rechargeable Standing Fan Wit Remote Control.</span><br>
+          <span
+            style="font-size: large;" id="itemPrice">₦ 41,999</span>
           <p class="d-flex justify-content-between"><em
-              style="text-decoration: line-through;font-size: small;color: #424242;">₦ 50,000
-            </em><span class="text-warning">-16%</span></p>
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">₦ 50,000
+            </em><span class="text-warning" id="itemPercent">-16%</span></p>
         </div>
         <div class="col-6 col-md-2 rounded item">
-          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/40/7749612/1.jpg?2169" alt="">
-          <br><span style="font-size: 17px;" class="itemTitle">SUMEC FIRMAN 5.5kva Sumec Firman RD3910EX Rugged Generator</span><br><span
-            style="font-size: large;" class="itemPrice" class="itemPrice">₦ 280,000</span>
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/40/7749612/1.jpg?2169" alt="" id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">SUMEC FIRMAN 5.5kva Sumec Firman RD3910EX Rugged Generator</span><br>
+          <span
+            style="font-size: large;" id="itemPrice">₦ 280,000</span>
           </h6>
         </div>
         <div class="col-6 col-md-2 rounded item">
-          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/86/727127/1.jpg?2967" alt="">
-          <br><span style="font-size: 17px;" class="itemTitle">Silver Crest German Industrial 5000W Food Crusher Blender, EXTRA MILL
-            JAR</span><br><span style="font-size: large;" class="itemPrice">₦ 18,999</span>
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/86/727127/1.jpg?2967" alt="" id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Silver Crest German Industrial 5000W Food Crusher Blender, EXTRA MILL
+            JAR</span><br>
+            <span style="font-size: large;" id="itemPrice">₦ 18,999</span>
           <p class="d-flex justify-content-between"><em
-              style="text-decoration: line-through;font-size: small;color: #424242;">₦ 25,000
-            </em><span class="text-warning">-24%</span></p>
-          <h6 style="text-decoration: line-through;font-size: small;color: #424242;">
-          </h6>
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">₦ 25,000
+            </em><span class="text-warning" id="itemPercent">-24%</span></p>
+          
         </div>
         <div class="col-6 col-md-2 rounded item">
-          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/53/4243011/1.jpg?1349" alt="">
-          <br><span style="font-size: 17px;" class="itemTitle">Haier Thermocool 519 Litres Chest Freezer - HTF-519IS R6 -
-            SILVER</span><br><span style="font-size: large;" class="itemPrice">₦ 563,900
+          <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/53/4243011/1.jpg?1349" alt="" id="image">
+          <br>
+          <span style="font-size: 17px;" id="itemTitle">Haier Thermocool 519 Litres Chest Freezer - HTF-519IS R6 -
+            SILVER</span><br>
+            <span style="font-size: large;" id="itemPrice">₦ 563,900
           </span>
           <p class="d-flex justify-content-between"><em
-              style="text-decoration: line-through;font-size: small;color: #424242;">₦ 648,485
-            </em><span class="text-warning">-13%</span></p>
+              style="text-decoration: line-through;font-size: small;color: #424242;" id="itemOldPrice">₦ 648,485
+            </em><span class="text-warning" id="itemPercent">-13%</span></p>
           </h6>
         </div>
       </div>
@@ -339,33 +371,39 @@
       <div class="row mt-2">
         <div class="col-6 col-md-2 rounded p-4">
           <a href="#"><img src="https://ng.jumia.is/cms/0-1-category-pages/phones-tablets/android-phones_300x300.png"
-              alt=""></a>
-          <br><span style="font-size: 17px;">Below ₦80,000</span>
+              alt="" id="image"></a>
+          <br>
+          <span style="font-size: 17px;">Below ₦80,000</span>
         </div>
         <div class="col-6 col-md-2 rounded p-4">
           <a href=""><img src="https://ng.jumia.is/cms/0-1-category-pages/phones-tablets/iphones_300x300.png"
-              alt=""></a>
-          <br><span style="font-size: 17px;">Below ₦300,000</span>
+              alt="" id="image"></a>
+          <br>
+          <span style="font-size: 17px;">Below ₦300,000</span>
           </h6>
         </div>
         <div class="col-6 col-md-2 rounded p-4">
           <a href=""><img src="https://ng.jumia.is/cms/0-1-category-pages/phones-tablets/android-tablets_300x300.png"
-              alt=""></a>
-          <br><span style="font-size: 17px;">Below ₦200,000</span>
+              alt="" id="image"></a>
+          <br>
+          <span style="font-size: 17px;">Below ₦200,000</span>
         </div>
         <div class="col-6 col-md-2 rounded p-4">
           <a href=""><img src="https://ng.jumia.is/cms/0-1-category-pages/phones-tablets/accesories_300x300.jpg"
-              alt=""></a>
-          <br><span style="font-size: 17px;">Below ₦15,000</span>
+              alt="" id="image"></a>
+          <br>
+          <span style="font-size: 17px;">Below ₦15,000</span>
         </div>
         <div class="col-6 col-md-2 rounded p-4">
-          <img src="https://ng.jumia.is/cms/0-1-category-pages/phones-tablets/cellphones_300x300.png" alt=""></a>
-          <br><span style="font-size: 17px;">Below ₦10,000</span>
+          <img src="https://ng.jumia.is/cms/0-1-category-pages/phones-tablets/cellphones_300x300.png" alt="" id="image"></a>
+          <br>
+          <span style="font-size: 17px;">Below ₦10,000</span>
         </div>
         <div class="col-6 col-md-2 rounded p-4">
           <a href=""><img src="https://ng.jumia.is/cms/0-1-category-pages/phones-tablets/brand-phones_300x300.png"
-              alt=""></a>
-          <br><span style="font-size: 17px;">Below ₦80,000</span>
+              alt="" id="image"></a>
+          <br>
+          <span style="font-size: 17px;">Below ₦80,000</span>
         </div>
       </div>
     </div>
@@ -458,17 +496,21 @@
         <li class="nav-item">
           <a class="nav-link active fw-bold" aria-current="page" href="index.html" style="color: #0f8cdf;"><i
               class="bi bi-house-door"></i>
-            <br>Home</a>
+            <br>
+            Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#executiveDeals"><i class="bi bi-tag"></i><br>Deals </a>
+          <a class="nav-link" aria-current="page" href="#executiveDeals"><i class="bi bi-tag"></i><br>
+            Deals </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="cart.html"><i class="bi bi-cart3 "></i><br> Cart</a>
+          <a class="nav-link" aria-current="page" href="cart.html"><i class="bi bi-cart3 "></i><br>
+             Cart</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasExample" aria-current="page" href="#"><i
-              class="bi bi-justify-right"></i> <br> More</a>
+              class="bi bi-justify-right"></i> <br>
+               More</a>
         </li>
       </ul>
     </div>
@@ -476,8 +518,8 @@
   <!-- Menu Canvas -->
   <div class="offcanvas offcanvas-start" style="width: 80%;" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasExampleLabel"><em class="fw-bold">OlaDev <i
-            class="bi bi-stars text-warning"></i></em></h5>
+     <h5 class="offcanvas-title" id="offcanvasExampleLabel"><em class="fw-bold">OlaDev <i
+      class="bi bi-stars text-warning"></i></em></h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
@@ -487,10 +529,10 @@
             <i class="bi bi-justify"></i> Categories
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Computers and Accessories</a></li>
-            <li><a class="dropdown-item" href="#">Phones and Tablets</a></li>
-            <li><a class="dropdown-item" href="#">Electronics</a></li>
-            <li><a class="dropdown-item" href="#">Home and Kitchen</a></li>
+            <li><a class="dropdown-item" href="home-kitchen.html">Home and Kitchen</a></li>
+            <li><a class="dropdown-item" href="phonesTablet.html">Phones and Tablets</a></li>
+            <li><a class="dropdown-item" href="electronics.html">Electronics</a></li>
+            <li><a class="dropdown-item" href="fashion.html">Fashion</a></li>
             <li><a class="dropdown-item" href="#">Other Categories</a></li>
           </ul>
         </li>

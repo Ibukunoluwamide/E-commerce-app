@@ -25,7 +25,7 @@
     <!-- Small Devices Navbar-->
     <div
         class="container-fluid bg-white d-md-none d-flex align-items-center justify-content-between shadow p-2 sticky-top">
-        <em> <a class="navbar-brand fw-bold fs-5" href="#" id="olaBrand">OlaDev <i
+        <em> <a class="navbar-brand fw-bold fs-5" href="index.html" id="olaBrand">OlaDev <i
                     class="bi bi-stars text-warning"></i></a></em>
         <input class="nosubmit" type="search" placeholder="Search..." id="searchBar" style="display: none;"
             onkeydown="searchBarr(event)">
@@ -38,13 +38,13 @@
         </div>
     </nav>
     <!-- item Info -->
-    <section class="m-auto col-12 col-md-5 ">
+    <section class="m-auto col-12 col-md-5 p-3 shadow-lg rounded">
         <div id="displayInfo"></div>
 
         <div class="text-center">
             <div>
-                <button class="quantity-btn btn-outline-secondary" onclick="quantitySub()">-</button> <b id="quantity">1</b> <button
-                    class="quantity-btn  btn-outline-secondary" onclick="quantityAdd()">+</button>
+                <button class="quantity-btn btn btn-outline-secondary" onclick="quantitySub()">-</button> <b id="quantity">1</b> <button
+                    class="quantity-btn btn btn-outline-secondary" onclick="quantityAdd()">+</button>
             </div>
             <div>
                 <button onclick="addToCart()" class="addToCartBtn btn btn-warning col-7 mt-2">ADD TO CART</button>

@@ -3,12 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-.itemTitle {
+#itemTitle {
     font-size: large !important;
 
 }
 
-.itemPrice {
+#itemPrice {
     font-weight: 600;
     font-size: 40px !important;
 }
