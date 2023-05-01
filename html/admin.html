@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon"
+    href="https://img.icons8.com/external-flatart-icons-flat-flatarticons/64/null/external-stars-nature-flatart-icons-flat-flatarticons-1.png"
+    type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/admin.css">
+  <title>Admin|Page</title>
+</head>
+<body>
+  <!-- Large Device Navbar -->
+  <nav class="navbar nav-pills d-none d-md-flex sticky-top bg-info" id="v-pills-tab" role="tablist">
+    <div class="container">
+      <span class="fs-4 text-white fw-bold" style="font-style: italic;">
+        <i class="fa-solid fa-user" ></i>
+        ADMIN
+      </span>
+     
+      <div>
+
+        <ul class="nav text-dark">
+          <li class="nav-item">
+            <button class="nav-link fw-bold active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home"
+              type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="fa fa-house"></i> Home</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link fw-bold" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile"
+              type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false" disabled > <i class="fa fa-user"></i> Profile</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link fw-bold" id="vpillsviewProducts-tab" data-bs-toggle="pill"
+              data-bs-target="#vpillsviewProducts" type="button" role="tab" aria-controls="vpillsviewProducts"
+              aria-selected="false"><i class="fa fa-upload"></i>  Uploaded Products</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link fw-bold" id="logOut" data-bs-toggle="pill" type="button"
+              role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fa fa-sign-out"></i> Log
+              out</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+  </nav>
+  <!--small device navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info d-md-none sticky-top" id="mainNav">
+    <div class="container">
+      <span class="fs-4 text-white fw-bold" style="font-style: italic;">
+        <i class="fa-solid fa-user" ></i>
+        ADMIN
+      </span>
+      <div>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa fa-bars fa-beat text-white" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div class="offcanvas offcanvas-start" style="width: 70%;" tabindex="-1" id="offcanvasExample"
+    aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header m-auto">
+      <img src="https://img.icons8.com/fluency/100/null/administrator-male.png" />
+    </div>
+    <div class="offcanvas-body">
+      <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <button class="nav-link fw-bold active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home"
+          type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="fa fa-house"></i> Home</button>
+        <button class="nav-link fw-bold" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile"
+          type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false" disabled><i class="fa fa-user"></i> Profile</button>
+        <button class="nav-link fw-bold" id="vpillsviewProducts-tab" data-bs-toggle="pill"
+          data-bs-target="#vpillsviewProducts" type="button" role="tab" aria-controls="vpillsviewProducts"
+          aria-selected="false"><i class="fa fa-upload"></i> Uploaded Products</button>
+        <button class="nav-link fw-bold" id="logOut" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab"
+          aria-controls="v-pills-settings" aria-selected="false"><i class="fa fa-sign-out"></i> Log out</button>
+      </div>
+    </div>
+  </div>
+  <div class="tab-content" id="v-pills-tabContent">
+    <div class="tab-pane fade show active col-md-5 m-auto p-2" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"
+      tabindex="0">
+      <h1 class="text-center pb-3 fw-bold text-primary">ADD PRODUCTS</h1>
+        <div class="mb-2">
+          <label for="productImage" class="form-label fw-bold">Upload Product Image</label>
+          <input type="file" class="form-control" id="productImage" accept="image/*">
+        </div>
+        <div class="mb-2">
+          <label for="productName" class="form-label fw-bold">Product Name</label>
+          <input type="text" class="form-control" id="productName">
+        </div>
+        <div class="mb-2">
+          <label for="productPrice" class="form-label fw-bold">Product Price</label>
+          <input type="number" class="form-control" id="productPrice"  />
+        </div>
+        <div class="mb-2">
+          <label for="productCategory" class="form-label fw-bold">Category</label>
+          <select name="" id="productCategory" class="form-select">
+            <option selected hidden>Category</option>
+            <option value="Clothing & Apparel">Clothing & Apparel</option>
+            <option value="Footwear & Shoes">Footwear & Shoes</option>
+            <option value="Electronics & Gadgets">Electronics & Gadgets</option>
+            <option value="Games & Toys">Games & Toys</option>
+            <option value="Veterinary & Pet Items">Veterinary & Pet Items</option>
+            <option value="Food and Beverages">Food and Beverages</option>
+            <option value="Furniture and Decoration">Furniture and Decoration</option>
+            <option value="Phones and Tablets">Phones and Tablets</option>
+            <option value="Stationery">Stationery</option>
+            <option value="Power, Automobile & Industrial">Power, Automobile & Industrial</option>
+            <option value="Household items">Household Items</option>
+            <option value="Hand & Power Tools">Hand & Power Tools</option>
+            <option value="Pharmaceuticals">Pharmaceuticals</option>
+            <option value="Tupperware">Tupperware</option>
+            <option value="Sports Products">Sports Products</option>
+            <option value="Health and Safety">Health and Safety</option>
+            <option value="Others">Others</option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <label for="totalproductItem" class="form-label fw-bold">Total Product Item</label>
+          <input type="number" class="form-control" id="totalproductItem" min="1" />
+        </div>
+        <button class="btn btn-primary w-100" type="submit" id="addProduct">Add Products</button>
+    </div>
+    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
+      ...</div>
+    <div class="tab-pane fade" id="vpillsviewProducts" role="tabpanel" aria-labelledby="vpillsviewProducts-tab"
+      tabindex="0">
+      <div id="exportProducts"></div>
+      <table class="table table-light table-hover table-striped text-center" id="viewProducts">
+      </table>
+       
+    </div>
+  </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Update Product</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-2">
+          <label for="productImage" class="form-label fw-bold">Upload Product Image</label>
+          <input type="file" class="form-control" id="editproductImage" accept="image/*">
+        </div>
+        <div class="mb-2">
+          <label for="productName" class="form-label fw-bold">Product Name</label>
+          <input type="text" class="form-control" id="editproductName">
+        </div>
+        <div class="mb-2">
+          <label for="productPrice" class="form-label fw-bold">Product Price</label>
+          <input type="number" class="form-control" id="editproductPrice"  />
+        </div>
+        <div class="mb-2">
+          <label for="productCategory" class="form-label fw-bold">Category</label>
+          <select name="" id="editproductCategory" class="form-select">
+            <option selected hidden>Category</option>
+            <option value="Clothing & Apparel">Clothing & Apparel</option>
+            <option value="Footwear & Shoes">Footwear & Shoes</option>
+            <option value="Electronics & Gadgets">Electronics & Gadgets</option>
+            <option value="Games & Toys">Games & Toys</option>
+            <option value="Veterinary & Pet Items">Veterinary & Pet Items</option>
+            <option value="Food and Beverages">Food and Beverages</option>
+            <option value="Furniture and Decoration">Furniture and Decoration</option>
+            <option value="Phones and Tablets">Phones and Tablets</option>
+            <option value="Stationery">Stationery</option>
+            <option value="Power, Automobile & Industrial">Power, Automobile & Industrial</option>
+            <option value="Household items">Household Items</option>
+            <option value="Hand & Power Tools">Hand & Power Tools</option>
+            <option value="Pharmaceuticals">Pharmaceuticals</option>
+            <option value="Tupperware">Tupperware</option>
+            <option value="Sports Products">Sports Products</option>
+            <option value="Health and Safety">Health and Safety</option>
+            <option value="Others">Others</option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <label for="totalproductItem" class="form-label fw-bold">Total Product Item</label>
+          <input type="number" class="form-control" id="edittotalproductItem"  />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" onclick="updateProduct()">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ 
+
+<script src="../Js/admin.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

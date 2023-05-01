@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon"
+    href="https://img.icons8.com/external-flatart-icons-flat-flatarticons/64/null/external-stars-nature-flatart-icons-flat-flatarticons-1.png"
+    type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTCA</title>
+</head>
+
+<body onload="alertMessage()">
+    <script>
+        let otcaCurrentUserIndex = localStorage.getItem("otcaCurrentUserIndex")
+        const alertMessage = () => {
+            if (otcaCurrentUserIndex) {
+                Swal.fire({
+                    icon: 'success',
+                    html: `
+                    Thank you for placing an order on OTCA! 
+                    <br>
+                    <br>
+                    ORDER NUMBER: <b class="text-success"> ${Math.round(Math.random() * 1000000000)}</b>
+                    <br>
+                    <br>
+                    Congratulations! Your order was successfully submitted.You will receive a confirmation email or SMS.Our customer service might contact you shortly to verify your order. 
+                    `,
+                    showCancelButton: true,
+                    confirmButtonColor: "#E07E1B",
+                    confirmButtonText: "Continue Shopping"
+                }).then((result) => {
+                    console.log(result);
+                    if (result.isConfirmed) {
+                        window.location.href = "./otca.html"
+                    } else if (result.isDismissed) {
+                        window.location.href = "./checkout.html"
+                    }
+                })
+            } else {
+                window.location.href = "./otca.html"
+            }
+
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

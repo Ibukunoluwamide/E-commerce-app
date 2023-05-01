@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#itemTitle {
+    font-size: large !important;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    display: block;
+    width: 100%;
+}
+
+
+#displayInfo img {
+    width: 50%;
+}
+
+.quantity-btn {
+    width: 50px;
+    height: 40px;
+
+}
+
+.addToCartBtn {
+    background-color: #f68b1e;
+}
+
+#displayInfo .d-flex {
+    font-weight: 800;
+}
+
+.form-select:focus {
+    border: 1px solid blue;
+    box-shadow: none !important;
+}
+.signInChanger{
+    cursor: pointer;
+  }
+@media only screen and (max-width: 688px) {
+    #displayInfo img {
+        width: 70% !important;
+    }
+
+}
