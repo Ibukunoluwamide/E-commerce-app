@@ -13,6 +13,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="../css/style.css">
   <title>OTCA</title>
@@ -76,13 +78,13 @@
               SEARCH
             </button>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle signInChange" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="bi bi-person" style="font-size: large;"> ACCOUNT</i>
             </a>
-            <ul class="dropdown-menu">
-              <li class="text-center signInChanger" onclick="signIn()"><a class="dropdown-item" href="#"><button
-                    class="btn col-12" style="background-color: #f68b1e;color: #fff;">SIGN IN</button></a></li>
+            <ul class="dropdown-menu logOutChange">
+              <li class="text-center "><a class="dropdown-item" href="#"><button
+                    class="btn col-12" style="background-color: #f68b1e;color: #fff;" onclick="signIn()">SIGN IN</button></a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
@@ -698,13 +700,13 @@
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle fs-3" href="#" role="button" data-bs-toggle="dropdown"
+          <a class="nav-link dropdown-toggle fs-3 signInChange" href="#" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
             <i class="bi bi-person"></i> ACCOUNT
           </a>
           <ul class="dropdown-menu">
-            <li class="text-center signInChanger" onclick="signIn()"><a class="dropdown-item" href="#"><button
-                  class="btn col-12" style="background-color: #f68b1e;color: #fff;">SIGN IN</button></a></li>
+            <li class="text-center logOutChange" ><a class="dropdown-item" href="#"><button
+                  class="btn col-12" style="background-color: #f68b1e;color: #fff;" onclick="signIn()">SIGN IN</button></a></li>
             <li>
               <hr class="dropdown-divider">
             </li>

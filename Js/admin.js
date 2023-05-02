@@ -67,7 +67,7 @@ addProduct.addEventListener('click', async () => {
 const productsLoader = () => {
     if (newProducts) {
         exportProducts.innerHTML = `
-        <div class="text-end p-1">
+        <div class="float-end p-1">
         <button class="btn btn-warning text-white" onclick="exportProductsBtn()">EXPORT PRODUCTS</button>
         </div>
         `

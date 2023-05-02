@@ -1,5 +1,5 @@
 let userArray = []
-let validateName = /^[A-Z a-z]{1,} [A-Z a-z]{1,}$/
+let validateName = /[\a-zA-Z]{3,}/
 let validateEmail = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
 let validatePhoneNo = /^[\d]{11}/
 let validatePassword = /[^~,]{6,}/
@@ -9,10 +9,14 @@ if (localStorage.OtcaUsers) {
 }
 
 const signup = () => {
-    console.log(userArray)
-    if (validateName.test(fullName.value) == false) {
-        fullName.classList.add("is-invalid")
-        alertName.innerText = "Invalid Full Name"
+    // console.log(userArray)
+    if (validateName.test(firstName.value) == false) {
+        firstName.classList.add("is-invalid")
+        alertFirstname.innerText = "Invalid First Name"
+    }
+   else if (validateName.test(lastName.value) == false) {
+        lastName.classList.add("is-invalid")
+        alertLastname.innerText = "Invalid Last Name"
     }
     else if (validateEmail.test(mail.value) == false) {
         mail.classList.add("is-invalid")
@@ -40,19 +44,22 @@ const signup = () => {
             texts[index].innerText = ""
 
         }
-        fullName.classList.remove("is-invalid")
+        firstName.classList.remove("is-invalid")
+        lastName.classList.remove("is-invalid")
         mail.classList.remove("is-invalid")
         ph.classList.remove("is-invalid")
         pw.classList.remove("is-invalid")
         cpw.classList.remove("is-invalid")
-        fullName.classList.add("is-valid")
+        firstName.classList.add("is-valid")
+        lastName.classList.add("is-valid")
         mail.classList.add("is-valid")
         ph.classList.add("is-valid")
         pw.classList.add("is-valid")
         cpw.classList.add("is-valid")
 
         userDetails = {
-            fullName: fullName.value,
+            firstName: firstName.value,
+            lastName: lastName.value,
             email: mail.value,
             phoneNo: ph.value,
             password: pw.value,
@@ -71,7 +78,6 @@ const signup = () => {
             })
         } else {
             userArray.push(userDetails)
-            console.log(userArray);
             localStorage.setItem("OtcaUsers", JSON.stringify(userArray))
             Swal.fire({
                 icon: 'success',

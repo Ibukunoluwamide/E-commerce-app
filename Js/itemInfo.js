@@ -161,6 +161,21 @@ const quantityAdd = () => {
   cartItem[index].qty++
   cartItem.splice(index, 1, cartItem[index])
   localStorage.setItem('cartItem', JSON.stringify(cartItem))
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-start",
+    iconColor: "white",
+    customClass: {
+      popup: "colored-toast",
+    },
+    showConfirmButton: false,
+    timer: 1500,
+    timerProgressBar: true,
+  });
+  Toast.fire({
+    icon: "success",
+    title: "Product added to successfully",
+  });
   if (cartItem) {
     const cartItemTotal = cartItem.reduce((acc, item) => acc + item.qty, 0)
     badge.forEach((eachBadge) => {
@@ -184,6 +199,21 @@ const quantitySub = () => {
   }
   cartItem.splice(index, 1, cartItem[index])
   localStorage.setItem('cartItem', JSON.stringify(cartItem))
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-start",
+    iconColor: "white",
+    customClass: {
+      popup: "colored-toast",
+    },
+    showConfirmButton: false,
+    timer: 1500,
+    timerProgressBar: true,
+  });
+  Toast.fire({
+    icon: "success",
+    title: "Item quantity has been updated",
+  });
   if (cartItem) {
     const cartItemTotal = cartItem.reduce((acc, item) => acc + item.qty, 0)
     badge.forEach((eachBadge) => {

@@ -2,7 +2,8 @@ let subTotal = JSON.parse(localStorage.getItem("subTotal"))
 let cartItems = JSON.parse(localStorage.getItem("cartItem"));
 let otcaUsers = JSON.parse(localStorage.getItem("OtcaUsers"))
 let otcaCurrentUserIndex = localStorage.getItem("otcaCurrentUserIndex")
-fn.value = otcaUsers[otcaCurrentUserIndex].fullName
+fn.value = otcaUsers[otcaCurrentUserIndex].firstName
+ln.value = otcaUsers[otcaCurrentUserIndex].lastName
 ph.value = otcaUsers[otcaCurrentUserIndex].phoneNo
 let currencyConverter = new Intl.NumberFormat("en-NG", {
   style: "currency",

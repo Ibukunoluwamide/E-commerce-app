@@ -10,9 +10,9 @@ navbars.map((eachItem) => {
 let cartTotal = 0;
 let qty
 let itemPriceText = ""
-let badge = document.querySelectorAll(".badge");
-// console.log(badge);
 let cartItem = JSON.parse(localStorage.getItem("cartItem"));
+
+
 
 if (cartItem == "") {
   cart.style.display = "none";
@@ -100,7 +100,6 @@ const cartLoader = () => {
 
       // CART SUMMMARY CALCULATION
       // const cartItemTotal = cartItem.reduce((acc, item) => acc + item.qty, 0)
-      badge.forEach((eachBadge)=>eachBadge.innerHTML = cartItemTotal)
     
       const cartItemPrice = cartItem.reduce((acc, item) => acc + item.convertedPrice * item.qty, 0)
       localStorage.setItem('subTotal',cartItemPrice)
@@ -139,6 +138,16 @@ const cartLoader = () => {
        `;
     cartSummary.style.display = "none";
   }
+
+  let cartItems = JSON.parse(localStorage.getItem("cartItem"));
+let badge = document.querySelectorAll(".badge");
+if (cartItems) {
+  const cartItemTotal = cartItems.reduce((acc, item) => acc + item.qty, 0)
+  badge.forEach((eachBadge) => {
+    eachBadge.innerHTML = cartItemTotal
+  });
+
+}
 }
 cartLoader()
 
@@ -182,6 +191,21 @@ const quantityAdd = (index) => {
   cartItem[index].qty++
   cartItem.splice(index, 1, cartItem[index])
   localStorage.setItem('cartItem', JSON.stringify(cartItem))
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-start",
+    iconColor: "white",
+    customClass: {
+      popup: "colored-toast",
+    },
+    showConfirmButton: false,
+    timer: 1500,
+    timerProgressBar: true,
+  });
+  Toast.fire({
+    icon: "success",
+    title: "Product added to successfully",
+  }); 
   cartLoader()
   
 };
@@ -197,6 +221,23 @@ const quantitySub = (index) => {
   }
   cartItem.splice(index, 1, cartItem[index])
   localStorage.setItem('cartItem', JSON.stringify(cartItem))
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-start",
+    iconColor: "white",
+    customClass: {
+      popup: "colored-toast",
+    },
+    showConfirmButton: false,
+    timer: 1500,
+    timerProgressBar: true,
+  });
+  Toast.fire({
+    icon: "success",
+    title: "Item quantity has been updated",
+  });
   cartLoader()
+
 };
+
 
