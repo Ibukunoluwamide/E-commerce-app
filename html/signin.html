@@ -40,12 +40,12 @@
       <div class="col-md col-12">
         <h2 class="p-2 pt-4 fw-bold text-center text-uppercase">Sign Up to Continue</h2>
         <div class="form-floating ">
-          <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+          <input type="text" class="form-control text-capitalize" id="firstName" placeholder="First Name" required>
           <label for="floatingInputGrid">First Name</label>
           <small id="alertFirstname" class="text-danger ps-2"></small>
         </div>
         <div class="form-floating ">
-          <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+          <input type="text" class="form-control text-capitalize" id="lastName" placeholder="Last Name" required>
           <label for="floatingInputGrid">Last Name</label>
           <small id="alertLastname" class="text-danger ps-2"></small>
         </div>
@@ -81,7 +81,7 @@
       <div class="col-md">
         <h2 class="p-2 pt-5 fw-bold text-center text-uppercase">Sign In </h2>
         <div class="form-floating mb-2">
-          <input type="email" class="form-control" id="usermail" placeholder="Email Address" required>
+          <input type="email" class="form-control text-lowercase" id="usermail" placeholder="Email Address" required>
           <label for="floatingInputGrid">Email Address</label>
         </div>
         <div class="form-floating mb-2">
@@ -89,7 +89,7 @@
           <label for="floatingPassword">Password</label>
         </div>
         <div class=" text-center">
-          <button class="btn btn-primary w-100" onclick="signIn()">Sign In</button>
+          <button class="btn btn-primary w-100" onclick="signInUser()">Sign In</button>
         </div>
         <div class="text-center">
           <button type="button" class="btn btn-danger btn-lg mt-2 col-11 col-md-6" style="border-radius: 30px; background-color: #FF353D;">

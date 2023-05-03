@@ -5,7 +5,6 @@ if (localStorage.newProducts) {
 }
 console.log(newProducts);
 addProduct.addEventListener('click', async () => {
-    let imageURL = ""
      console.log(productImage.files[0]);
  
     if (!productName.value || !productPrice.value || !productCategory.value || !productImage.value || !totalproductItem.value) {
@@ -222,3 +221,27 @@ logOutBtn.forEach((text) => {
         window.location.href = "../index.html"
     })
 })
+
+
+let otcaCurrentUserIndex = localStorage.getItem("otcaCurrentUserIndex")
+let otcaUsers = JSON.parse(localStorage.getItem("OtcaUsers"))
+if (otcaUsers) {
+  if (otcaCurrentUserIndex) {
+    console.log(otcaUsers[otcaCurrentUserIndex]);
+    document.querySelectorAll(".signInChange").forEach((eachText) => {
+      eachText.innerHTML = `
+      <b><i class="bi bi-person-fill-check fs-5"></i> Hi, ${otcaUsers[otcaCurrentUserIndex].firstName}</b>
+      `
+    })
+    document.querySelectorAll(".logOutChange").forEach((eachText) => {
+      eachText.innerHTML = `
+         <b class="w-100 fs-5" style="color:  #f68b1e; cursor:pointer;" onclick="logOutUser()">LOGOUT</b>
+      `
+    })
+  }
+}
+
+const logOutUser = ()=>{
+  localStorage.removeItem('otcaCurrentUserIndex')
+   window.location.href = "../html/signin.html"
+}
