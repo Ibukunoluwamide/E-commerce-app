@@ -12,6 +12,7 @@ let currencyConverter = new Intl.NumberFormat("en-NG", {
 });
 let currencyConvertedSubTotal = currencyConverter.format(subTotal);
 let currencyConvertedTotal = currencyConverter.format(Number(subTotal) + Number(2500));
+let currencyConvertedTotal2 = currencyConverter.format(Number(subTotal) + Number(1500));
 document.querySelectorAll('.displaySubTotalPrice').forEach((item) => {
   item.innerHTML = currencyConvertedSubTotal
 
@@ -23,7 +24,7 @@ document.querySelectorAll('.displayTotalPrice').forEach((item) => {
 })
 pickup.addEventListener("change", () => {
   document.querySelectorAll(".shippingAmount").forEach((item) => {
-    item.innerHTML = "₦0.00"
+    item.innerHTML = "₦1,500"
   })
 
   document.querySelectorAll('.displaySubTotalPrice').forEach((item) => {
@@ -32,7 +33,7 @@ pickup.addEventListener("change", () => {
   })
   document.querySelectorAll('.displayTotalPrice')
   document.querySelectorAll('.displayTotalPrice').forEach((item) => {
-    item.innerHTML = currencyConvertedSubTotal
+    item.innerHTML = currencyConvertedTotal2
 
   })
 
@@ -43,7 +44,7 @@ doorDel.addEventListener("change", () => {
   })
 
   document.querySelectorAll('.displaySubTotalPrice').forEach((item) => {
-    item.innerHTML = currencyConvertedSubTotal
+    item.innerHTML = currencyConvertedSubTotal 
 
   })
   document.querySelectorAll('.displayTotalPrice')
